@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .profile-header {
+            background-color: #2d3748;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center h-screen">
+    <div class="w-full max-w-2xl p-6 bg-gray-800 rounded-lg shadow-lg">
+        <div class="profile-header p-4 rounded-t-lg">
+            <h2 class="text-3xl font-semibold text-center">Profile</h2>
+        </div>
+        <div class="p-4">
+            <div class="flex items-center mb-6">
+                <img class="w-24 h-24 rounded-full mr-4 border-2 border-yellow-500" src="https://via.placeholder.com/150" alt="Profile Picture">
+                <div>
+                    <h3 class="text-xl font-semibold"><%=user.name%></h3>
+                    <p class="text-yellow-500">Software Engineer</p>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="block text-yellow-500 text-sm font-bold mb-2" for="email">
+                   Email : <%=user.email%>
+                </label>
+            </div>
+            <div class="mb-4">
+                <label class="block text-yellow-500 text-sm font-bold mb-2" for="username">
+                   Username : <%=user.username%>
+                </label>
+            </div>
+            <div class="flex justify-center gap-6">
+                <a href="/logout" class="bg-yellow-500 hover:bg-yellow-700 text-gray-900 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                    Logout
+                </a>
+                <a href="/home" class="bg-yellow-500 hover:bg-yellow-700 text-gray-900 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                    Home
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
